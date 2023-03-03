@@ -1,0 +1,19 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "ultimatetools:ultimate_ingot",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "ultimatetools:ultimate_block",
+    "data": 0
+  }
+}

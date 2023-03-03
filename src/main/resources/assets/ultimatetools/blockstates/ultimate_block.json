@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "ultimatetools:ultimate_block" }
+        ]
+    }
+}

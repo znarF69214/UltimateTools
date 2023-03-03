@@ -1,0 +1,13 @@
+/.gradle/
+/build/
+/.DS_Store
+/*/.DS_Store
+/*/*/.DS_Store
+/*/*/*/.DS_Store
+/run/
+/bin/
+/.settings/
+/.classpath
+/.project
+/runClient.launch
+/runServer.launch

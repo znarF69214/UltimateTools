@@ -1,0 +1,10 @@
+item.ultimate_sword.name=Ultimate Sword
+item.ultimate_shovel.name=Ultimate Shovel
+item.ultimate_pickaxe.name=Ultimate Pickaxe
+item.ultimate_hoe.name=Ultimate Hoe
+item.ultimate_axe.name=Ultimate Axe
+item.ultimate_ingot.name=Ultimate Ingot
+item.ultimate_dust.name=Ultimate Dust
+tile.ultimate_block.name=Ultimate Block
+tile.compressedstone_block.name=Compressedstone Block
+itemGroup.ultimateToolsTab=Ultimate Tools
