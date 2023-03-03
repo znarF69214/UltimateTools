@@ -1,0 +1,10 @@
+item.ultimate_axe.name=Ultimative Axt
+item.ultimate_hoe.name=Ultimative Hacke
+item.ultimate_shovel.name=Ultimative Schaufel
+item.ultimate_pickaxe.name=Ultimative Spitzhacke
+item.ultimate_sword.name=Ultimatives Schwert
+item.ultimate_ingot.name=Ultimativer Barren
+item.ultimate_dust.name=Ultimativer Staub
+tile.ultimate_block.name=Ultimativer Block
+tile.compressedstone_block.name=Compressedstone Block
+itemGroup.ultimateToolsTab=Ultimative Werkzeuge

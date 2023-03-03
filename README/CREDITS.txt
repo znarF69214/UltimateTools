@@ -1,0 +1,8 @@
+UltimateTools: Credits/Thank you
+
+This is my first real mod, so huge thanks to all the people that provided the tutorials I used for this.
+These tutorials were:
+1. https://codakid.com/guide-to-minecraft-modding-with-java/
+2. https://suppergerrie2.com/minecraft-1-12-modding-with-forge-1-getting-started/
+
+Also, I'd like to express my gratitude for suppergerrie2 who provided some basic textures with their tutorial.

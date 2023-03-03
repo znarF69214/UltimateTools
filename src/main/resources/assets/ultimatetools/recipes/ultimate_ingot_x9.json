@@ -1,0 +1,13 @@
+{ 
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+	  "item": "ultimatetools:ultimate_block",
+	  "data": 0
+	}
+  ],
+  "result": {
+    "item": "ultimatetools:ultimate_ingot",
+    "count": 9
+  }
+}

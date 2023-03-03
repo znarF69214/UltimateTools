@@ -1,0 +1,31 @@
+{ 
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"  ],
+  "key": {
+    "A": [
+      {
+        "item": "ultimatetools:compressedstone_block",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "item": "minecraft:diamond_block",
+        "data": 0
+      }
+    ],
+    "C": [
+      {
+        "item": "minecraft:obsidian",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "ultimatetools:ultimate_dust",
+    "data": 0
+  }
+}

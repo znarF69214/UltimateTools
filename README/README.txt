@@ -1,0 +1,1 @@
+Please make sure to read both the LICENSE.txt file and the README.md file before editing the source code.
