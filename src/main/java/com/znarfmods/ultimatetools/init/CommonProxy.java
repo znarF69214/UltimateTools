@@ -21,18 +21,23 @@ public class CommonProxy {
 	
 	@SubscribeEvent
 	public static void registerRenders(ModelRegistryEvent event) {
-		//from package.file: items.UltimateToolsInit.java
+		//from file: UltimateToolsInit.java
 		registerRender(UltimateToolsInit.ultimateSword);
 		registerRender(UltimateToolsInit.ultimatePickaxe);
 		registerRender(UltimateToolsInit.ultimateShovel);
 		registerRender(UltimateToolsInit.ultimateAxe);
 		registerRender(UltimateToolsInit.ultimateHoe);
-		//from package.file: items.ModItems.java
+		//from file: ModItems.java
 		registerRender(ModItems.ultimateIngot);
 		registerRender(ModItems.ultimateDust);
-		//from package.file: blocks.ModBlocks.java
+		//from file: ModBlocks.java
 		registerRender(Item.getItemFromBlock(ModBlocks.ultimateBlock));
 		registerRender(Item.getItemFromBlock(ModBlocks.compressedstoneBlock));
+		//from file: ModArmor.java
+		registerRender(ModArmor.ultimateHelmet);
+		registerRender(ModArmor.ultimateChestplate);
+		registerRender(ModArmor.ultimateLeggings);
+		registerRender(ModArmor.ultimateBoots);
 		
 	}
 	
@@ -41,7 +46,7 @@ public class CommonProxy {
 		
 	}
 	
-	//for package: items
+	//for items
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {
@@ -54,9 +59,14 @@ public class CommonProxy {
 		//from file: ModItems.java
 		event.getRegistry().registerAll(ModItems.ultimateIngot);
 		event.getRegistry().registerAll(ModItems.ultimateDust);
+		//from file: ModArmor.java
+		event.getRegistry().registerAll(ModArmor.ultimateHelmet);
+		event.getRegistry().registerAll(ModArmor.ultimateChestplate);
+		event.getRegistry().registerAll(ModArmor.ultimateLeggings);
+		event.getRegistry().registerAll(ModArmor.ultimateBoots);
 	}
 	
-	//for package: blocks
+	//for blocks
 	
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
