@@ -21,10 +21,10 @@ public class ModArmor {
 	public static void init() {
 		// create the armor specs
 		String[] names = {"ultimate_helmet", "ultimate_chestplate", "ultimate_leggings", "ultimate_boots"};
-		int maxUses = 20000;
+		int maxUses = 200000;
 		int enchantability = 30;
 		int[] reductionAmounts = {7,12,14,10};
-		float toughness = 5F;
+		float toughness = 50F;
 		SoundEvent equipSound = SoundEvents.ITEM_ARMOR_EQUIP_GENERIC;
 		
 		for (int i = 0; i < 4; i++) {
