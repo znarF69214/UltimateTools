@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0.1'
+version = '1.0.2'
 group = 'com.znarfmods.ultimatetools' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'ultimatetools'
 
@@ -87,7 +87,7 @@ jar {
         attributes([
             "Specification-Title": "ultimatetools",
             "Specification-Vendor": "znarF69214",
-            "Specification-Version": "1.0.1",
+            "Specification-Version": "1.0.2",
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"znarF69214",
