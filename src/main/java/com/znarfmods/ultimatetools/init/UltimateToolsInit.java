@@ -23,10 +23,10 @@ public class UltimateToolsInit {
 		
 		// create the tool specs
         String[] name =  {"ultimate_sword","ultimate_pickaxe","ultimate_shovel","ultimate_axe","ultimate_hoe"};
-        int harvestLevel = 10;
-        int maxUses = 20000;
+        int harvestLevel = 100;
+        int maxUses = 200000;
         float efficiency = 40.0F;
-        float damage = 100.0F;
+        float damage = 100000.0F;
         int enchantability = 30;
         float destructionSpeedAxe = -1.5F;
         
