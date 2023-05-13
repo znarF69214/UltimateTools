@@ -104,19 +104,19 @@ public class UltimateToolsInit {
 		}
 		
 		// to avoid errors on loading
-        float destructionSpeedAxe = -1.5F;
+    float destructionSpeedAxe = -1.5F;
         
-        // create the toolMaterials from tool specs
-        for (int i=0; i<ultimateToolMaterial.length;i++) {
-        	ultimateToolMaterial[i] = EnumHelper.addToolMaterial(names[i], harvestLevel, maxUses, efficiency, damage, enchantability);
-        }
+    // create the toolMaterials from tool specs
+    for (int i=0; i<ultimateToolMaterial.length;i++) {
+    	ultimateToolMaterial[i] = EnumHelper.addToolMaterial(names[i], harvestLevel, maxUses, efficiency, damage, enchantability);
+    }
         
-        // create the tools using custom methods to automatically set the names
-        ultimateSword = new CustomSword(ultimateToolMaterial[0], ModCreativeTabs.ULTIMATETOOLS);
-        ultimatePickaxe = new CustomPickaxe(ultimateToolMaterial[1], ModCreativeTabs.ULTIMATETOOLS);
-        ultimateShovel = new CustomShovel(ultimateToolMaterial[2], ModCreativeTabs.ULTIMATETOOLS);
-        ultimateAxe = new CustomAxe(ultimateToolMaterial[3],destructionSpeedAxe, ModCreativeTabs.ULTIMATETOOLS);
-        ultimateHoe = new CustomHoe(ultimateToolMaterial[4], ModCreativeTabs.ULTIMATETOOLS);
+    // create the tools using custom methods to automatically set the names
+    ultimateSword = new CustomSword(ultimateToolMaterial[0], ModCreativeTabs.ULTIMATETOOLS);
+    ultimatePickaxe = new CustomPickaxe(ultimateToolMaterial[1], ModCreativeTabs.ULTIMATETOOLS);
+    ultimateShovel = new CustomShovel(ultimateToolMaterial[2], ModCreativeTabs.ULTIMATETOOLS);
+    ultimateAxe = new CustomAxe(ultimateToolMaterial[3],destructionSpeedAxe, ModCreativeTabs.ULTIMATETOOLS);
+    ultimateHoe = new CustomHoe(ultimateToolMaterial[4], ModCreativeTabs.ULTIMATETOOLS);
 	}
 
 }
