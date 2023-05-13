@@ -1,5 +1,6 @@
 package com.znarfmods.ultimatetools;
 
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -10,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.znarfmods.ultimatetools.init.ModArmor;
 import com.znarfmods.ultimatetools.init.ModBlocks;
+import com.znarfmods.ultimatetools.init.ModConfig;
 import com.znarfmods.ultimatetools.init.ModItems;
 import com.znarfmods.ultimatetools.init.ModRecipes;
 import com.znarfmods.ultimatetools.init.UltimateToolsInit;
@@ -37,11 +39,14 @@ public class UltimateToolsMod
         			"Creating UltimateTools (Version "+VERSION+") for Minecraft Version "+MCVERSION+"\n"+
         			"------------------------------"
         			);
-        UltimateToolsInit.initTools();
+        logger.info("Loading Config File!");
+        ModConfig.init(new Configuration(event.getSuggestedConfigurationFile()), logger);
+        logger.info("Loaded Config! Starting to initialize the mod items and blocks!");
+        UltimateToolsInit.initTools(ModConfig.harvestLevel,ModConfig.maxUses,ModConfig.damage);
         logger.info("Ultimate Tools: Initialized!");
         ModItems.init();
         logger.info("Mod Items: Initialized!");
-        ModArmor.init();
+        ModArmor.init(ModConfig.maxUses);
         logger.info("Mod Armor: Initialized!");
         ModBlocks.init();
         logger.info("Mod Blocks: Initialized!");
