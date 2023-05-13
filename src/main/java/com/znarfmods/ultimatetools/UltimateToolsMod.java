@@ -33,10 +33,10 @@ public class UltimateToolsMod
     {
         logger = event.getModLog();
         logger.info("\n"+
-        		"------------------------------\n"+
-        		"Creating UltimateTools (Version "+VERSION+") for Minecraft Version "+MCVERSION+"\n"+
-        		"------------------------------"
-        		);
+        			"------------------------------\n"+
+        			"Creating UltimateTools (Version "+VERSION+") for Minecraft Version "+MCVERSION+"\n"+
+        			"------------------------------"
+        			);
         UltimateToolsInit.initTools();
         logger.info("Ultimate Tools: Initialized!");
         ModItems.init();
@@ -46,10 +46,10 @@ public class UltimateToolsMod
         ModBlocks.init();
         logger.info("Mod Blocks: Initialized!");
         logger.info("\n"+
-        		"------------------------------\n"+
-        		"Created UltimateTools (Version "+VERSION+") for Minecraft Version "+MCVERSION+"\n"+
-        		"------------------------------"
-        		);
+        			"------------------------------\n"+
+        			"Created UltimateTools (Version "+VERSION+") for Minecraft Version "+MCVERSION+"\n"+
+        			"------------------------------"
+        			);
         
     }
 
@@ -57,26 +57,31 @@ public class UltimateToolsMod
     public void init(FMLInitializationEvent event)
     {
         logger.info("\n"+
-        		"------------------------------\n"+
-        		"Loading UltimateTools (Version "+VERSION+")!\n"+
-        		"------------------------------"
-        		);
-        logger.info("Mod Recipes: Registering!");
+        			"------------------------------\n"+
+        			"Loading UltimateTools (Version "+VERSION+")!\n"+
+        			"------------------------------"
+        			);
+    	logger.info("Mod Recipes: Registering!");
         ModRecipes.init();
         logger.info("Mod Recipes: Registered!");
         logger.info("\n"+
-        		"------------------------------\n"+
-        		"Loaded UltimateTools (Version "+VERSION+")!\n"+
-        		"------------------------------"
-        		);
+        			"------------------------------\n"+
+        			"Loaded UltimateTools (Version "+VERSION+")!\n"+
+        			"------------------------------"
+        			);
     }
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
     	logger.info("\n"+
-    	        "------------------------------\n"+
-    			"Fully loaded UltimateTools (Version "+VERSION+")!\n"+
-        		"------------------------------"
-    			);
+    				"------------------------------\n"+
+    				"Finishing UltimateTools (Version"+VERSION+")!\n"+
+    				"------------------------------"
+    				);
+    	logger.info("\n"+
+    				"------------------------------\n"+
+    				"Fully loaded UltimateTools (Version "+VERSION+")!\n"+
+    				"------------------------------"
+    				);
     }
 }

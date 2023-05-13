@@ -19,20 +19,62 @@ public class UltimateToolsInit {
     public static Item ultimateAxe;
     public static Item ultimateHoe;
 	
+    /**
+     * A function to initialize the "ultimate tools" with default specs.
+     */
 	public static void initTools() {
 		
-		// create the tool specs
-        String[] name =  {"ultimate_sword","ultimate_pickaxe","ultimate_shovel","ultimate_axe","ultimate_hoe"};
-        int harvestLevel = 10;
-        int maxUses = 20000;
-        float efficiency = 40.0F;
-        float damage = 100.0F;
-        int enchantability = 30;
+		/** default tool specs:
+         *	String[] names =  {"ultimate_sword","ultimate_pickaxe","ultimate_shovel","ultimate_axe","ultimate_hoe"};
+         *	int harvestLevel = 10;
+         *	int maxUses = 20000;
+         *	float efficiency = 40.0F;
+         *	float damage = 100.0F;
+         *	int enchantability = 30;
+         */
+		initTools(10,20000,100.0F);
+	}
+    
+	/**
+	 * A function to initialize the "ultimate tools" with custom harvestLevel, maxUses and damage provided by the parameters.
+	 * @param harvestLevel		(int)		determines the strength of the material that may be mined with the tools (diamond tools: 4; iron tools: 3; stone tools: 2; wooden tools: 1)
+	 * @param maxUses			(int)		determines the maximal amount of uses on the item.
+	 * @param damage			(float)		determines the damage dealt by the tools.
+	 */
+	public static void initTools(int harvestLevel, int maxUses, float damage) {
+		initTools(harvestLevel, maxUses, 40.0F, damage, 30);
+	}
+	
+	/**
+	 * A function to initialize the "ultimate tools" with default names and custom specs provided by the parameters.
+	 * @param harvestLevel		(int)		determines the strength of the material that may be mined with the tools (diamond tools: 4; iron tools: 3; stone tools: 2; wooden tools: 1)
+	 * @param maxUses			(int)		determines the maximal amount of uses on the item.
+	 * @param efficiency		(float)		determines the efficiency of the tools.
+	 * @param damage			(float)		determines the damage dealt by the tools.
+	 * @param enchantability	(int)		determines the level of enchantability.
+	 */
+	public static void initTools(int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
+		// set the names
+		String[] names =  {"ultimate_sword","ultimate_pickaxe","ultimate_shovel","ultimate_axe","ultimate_hoe"};
+		initTools(names, harvestLevel, maxUses, efficiency, damage, enchantability);
+	}
+	
+	/**
+	 * A function to initialize the "ultimate tools" with custom specs provided by the parameters.
+	 * @param names				(String[]) 	determines the names for the four parts of the "ultimate armor".
+	 * @param harvestLevel		(int)		determines the strength of the material that may be mined with the tools (diamond tools: 4; iron tools: 3; stone tools: 2; wooden tools: 1)
+	 * @param maxUses			(int)		determines the maximal amount of uses on the item.
+	 * @param efficiency		(float)		determines the efficiency of the tools.
+	 * @param damage			(float)		determines the damage dealt by the tools.
+	 * @param enchantability	(int)		determines the level of enchantability.
+	 */
+	public static void initTools(String[] names, int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
+		// to avoid errors on loading
         float destructionSpeedAxe = -1.5F;
         
         // create the toolMaterials from tool specs
         for (int i=0; i<ultimateToolMaterial.length;i++) {
-        	ultimateToolMaterial[i] = EnumHelper.addToolMaterial(name[i], harvestLevel, maxUses, efficiency, damage, enchantability);
+        	ultimateToolMaterial[i] = EnumHelper.addToolMaterial(names[i], harvestLevel, maxUses, efficiency, damage, enchantability);
         }
         
         // create the tools using custom methods to automatically set the names
@@ -42,6 +84,5 @@ public class UltimateToolsInit {
         ultimateAxe = new CustomAxe(ultimateToolMaterial[3],destructionSpeedAxe, ModCreativeTabs.ULTIMATETOOLS);
         ultimateHoe = new CustomHoe(ultimateToolMaterial[4], ModCreativeTabs.ULTIMATETOOLS);
 	}
-	
 
 }
