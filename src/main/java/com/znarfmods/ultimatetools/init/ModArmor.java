@@ -40,6 +40,10 @@ public class ModArmor {
 	 * @param maxUses	(int)	determines the maximal amount of uses on the item.
 	 */
 	public static void init(int maxUses) {
+		if (maxUses <= 0) {
+			init();
+			return;
+		}
 		init(maxUses, 5F);
 	}
 	
@@ -49,6 +53,12 @@ public class ModArmor {
 	 * @param toughness	(float)	determines the toughness of the armor.
 	 */
 	public static void init(int maxUses, float toughness) {
+		// filter wrong inputs
+		if(toughness <= 0F) {
+			init(maxUses);
+			return;
+		}
+		
 		int[] reductionAmounts = {7,12,14,10};
 		init(maxUses, 30, reductionAmounts, toughness);
 	}
@@ -61,6 +71,18 @@ public class ModArmor {
 	 * @param toughness			(float)	determines the toughness of the armor.
 	 */
 	public static void init(int maxUses, int enchantability, int[] reductionAmounts, float toughness) {
+		//filter wrong inputs
+		if (enchantability <= 0 || reductionAmounts.length != ultimateArmorMaterial.length) {
+			init(maxUses,toughness);
+			return;
+		}
+		for (int i = 0; i<reductionAmounts.length; i++) {
+			if (reductionAmounts[i] <= 0) {
+				init(maxUses,toughness);
+				return;
+			}
+		}
+		
 		init(maxUses, enchantability, reductionAmounts, toughness, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC);
 	}
 	
@@ -87,7 +109,19 @@ public class ModArmor {
 	 * @param equipSound		(SoundEvent)	determines the sound that can be heard on equipping.
 	 */
 	public static void init(String[] names, int maxUses, int enchantability, int[] reductionAmounts, float toughness, SoundEvent equipSound) {
-		for (int i = 0; i < 4; i++) {
+		//filter wrong inputs
+		if (names.length != ultimateArmorMaterial.length) {
+			init(maxUses,enchantability,reductionAmounts,toughness,equipSound);
+			return;
+		}
+		for (int i = 0; i < names.length; i++) {
+			if (names[i].equals("")) {
+				init(maxUses,enchantability,reductionAmounts,toughness,equipSound);
+				return;
+			}
+		}
+		
+		for (int i = 0; i < ultimateArmorMaterial.length; i++) {
 			ultimateArmorMaterial[i] = EnumHelper.addArmorMaterial(names[i], References.MODID + ":ultimate", maxUses, reductionAmounts, enchantability, equipSound, toughness);
 		}
 		ultimateHelmet = new CustomArmor(ultimateArmorMaterial[0], EntityEquipmentSlot.HEAD, ModCreativeTabs.ULTIMATETOOLS);
