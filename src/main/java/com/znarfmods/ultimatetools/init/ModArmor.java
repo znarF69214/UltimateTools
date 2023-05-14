@@ -94,7 +94,7 @@ public class ModArmor {
 	 * @param toughness			(float)			determines the toughness of the armor.
 	 * @param equipSound		(SoundEvent)	determines the sound that can be heard on equipping.
 	 */
-	public static void init(int maxUses, int enchantability, int[] reductionAmounts, float toughness, SoundEvent equipSound) {
+	private static void init(int maxUses, int enchantability, int[] reductionAmounts, float toughness, SoundEvent equipSound) {
 		String[] names = {"ultimate_helmet", "ultimate_chestplate", "ultimate_leggings", "ultimate_boots"};
 		init(names, maxUses, enchantability, reductionAmounts, toughness, equipSound);
 	}
@@ -108,7 +108,7 @@ public class ModArmor {
 	 * @param toughness			(float)			determines the toughness of the armor.
 	 * @param equipSound		(SoundEvent)	determines the sound that can be heard on equipping.
 	 */
-	public static void init(String[] names, int maxUses, int enchantability, int[] reductionAmounts, float toughness, SoundEvent equipSound) {
+	private static void init(String[] names, int maxUses, int enchantability, int[] reductionAmounts, float toughness, SoundEvent equipSound) {
 		//filter wrong inputs
 		if (names.length != ultimateArmorMaterial.length) {
 			init(maxUses,enchantability,reductionAmounts,toughness,equipSound);

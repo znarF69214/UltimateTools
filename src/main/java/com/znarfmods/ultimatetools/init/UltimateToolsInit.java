@@ -90,7 +90,7 @@ public class UltimateToolsInit {
 	 * @param damage			(float)		determines the damage dealt by the tools.
 	 * @param enchantability	(int)		determines the level of enchantability.
 	 */
-	public static void initTools(String[] names, int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
+	private static void initTools(String[] names, int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
 		if (names.length != ultimateToolMaterial.length) {
 			initTools(harvestLevel,maxUses,efficiency,damage,enchantability);
 			return;

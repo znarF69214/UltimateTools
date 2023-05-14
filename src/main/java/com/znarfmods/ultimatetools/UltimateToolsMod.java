@@ -42,7 +42,7 @@ public class UltimateToolsMod
         logger.info("Loading Config File!");
         ModConfig.init(new Configuration(event.getSuggestedConfigurationFile()), logger);
         logger.info("Loaded Config! Starting to initialize the mod items and blocks!");
-        UltimateToolsInit.initTools(ModConfig.harvestLevel,ModConfig.maxUses,ModConfig.damage);
+        UltimateToolsInit.initTools(ModConfig.harvestLevel,ModConfig.maxUses,ModConfig.efficiency,ModConfig.damage,ModConfig.enchantability);
         logger.info("Ultimate Tools: Initialized!");
         ModItems.init();
         logger.info("Mod Items: Initialized!");
